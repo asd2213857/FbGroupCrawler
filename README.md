@@ -18,7 +18,7 @@ comment:[評論內容1,評論內容2,評論內容3...]
 ```
 
 使用方式
-* 請git clone請先至fb-acoount.txt更改帳密(第一行為FB帳號、第二行為FB密碼)
+* 請先至fb-acoount.txt更改成您的帳密(第一行為FB帳號、第二行為FB密碼)
 * 直接執行(如環境已有bs4、selenium、pandas等套件，可省略第一行)
 ```commandline
 python setup.py install
