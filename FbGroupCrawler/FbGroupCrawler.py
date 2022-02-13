@@ -159,7 +159,7 @@ def crawler(URL, Group_creation_date):
     chrome_options = webdriver.ChromeOptions()
     prefs = {"profile.default_content_setting_values.notifications": 2}
     chrome_options.add_experimental_option("prefs", prefs)
-    #chrome_options.add_argument('--headless') #不顯示瀏覽器
+    chrome_options.add_argument('--headless') #不顯示瀏覽器
     chrome_options.add_argument('blink-settings=imagesEnabled=false')  # 不顯示圖片
     chrome_options.add_argument("start-maximized")
     chrome_options.add_argument("disable-infobars")
