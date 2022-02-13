@@ -21,7 +21,7 @@ comment:[評論內容1,評論內容2,評論內容3...]
 * 請先至fb-acoount.txt更改成您的帳密(第一行為FB帳號、第二行為FB密碼)
 * 直接執行(如環境已有bs4、selenium、pandas等套件，可省略第一行)
 ```commandline
-python setup.py install
+pip3 install -r requirements.txt 
 python FbGroupCrawler/FbGroupCrawler.py
 ```
 執行後會跳出提示訊息依照提示訊息輸入FB社團網址網址及日期(你想要爬何時以後發布的文章)。
