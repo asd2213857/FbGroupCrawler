@@ -1,4 +1,5 @@
 import selenium
+import chromedriver_autoinstaller
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
@@ -158,7 +159,7 @@ def crawler(URL, Group_creation_date):
     chrome_options = webdriver.ChromeOptions()
     prefs = {"profile.default_content_setting_values.notifications": 2}
     chrome_options.add_experimental_option("prefs", prefs)
-    chrome_options.add_argument('--headless') #不顯示瀏覽器
+    #chrome_options.add_argument('--headless') #不顯示瀏覽器
     chrome_options.add_argument('blink-settings=imagesEnabled=false')  # 不顯示圖片
     chrome_options.add_argument("start-maximized")
     chrome_options.add_argument("disable-infobars")
@@ -168,7 +169,9 @@ def crawler(URL, Group_creation_date):
     chrome_options.add_argument('--disable-gpu')
     chrome_options.add_argument("--disable-dev-shm-usage")
 
-    driver = webdriver.Chrome(executable_path="../chromedriver", options=chrome_options)
+    chromedriver_autoinstaller.install()
+    driver = webdriver.Chrome(options=chrome_options)
+    #driver = webdriver.Chrome(executable_path="../chromedriver", options=chrome_options)
 
     # 是否需要登入
     with open('../fb-account.txt') as file:
